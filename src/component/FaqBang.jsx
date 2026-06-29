@@ -1,51 +1,45 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function FaqBang() {
-    const [openIndex, setOpenIndex] = useState(0);
-
     const faqs = [
-        { question: "একটি গ্রোসারি স্টোর পস সিস্টেম সাধারণ রিটেইল সিস্টেম থেকে কীভাবে আলাদা?", answer: "গ্রোসারি স্টোর পস সিস্টেম বিশেষভাবে ডিজাইন করা হয়েছে উচ্চ-পরিমাণ লেনদেন, হাজার হাজার SKU, ওজনযুক্ত আইটেমের জন্য ইন্টিগ্রেটেড স্কেল, SNAP/EBT পেমেন্ট এবং পচনশীল পণ্য ও মেয়াদ উত্তীর্ণের তারিখ সহ জটিল ইনভেন্টরি ম্যানেজমেন্ট পরিচালনা করতে।" },
-        { question: "Markt POS কি আমার বিদ্যমান হার্ডওয়্যারের সাথে কাজ করবে?", answer: "হ্যাঁ, Markt POS বারকোড স্ক্যানার, রিসিট প্রিন্টার, ক্যাশ ড্রয়ার এবং স্কেল সহ ৯৫% স্ট্যান্ডার্ড রিটেইল হার্ডওয়্যারের সাথে ইন্টিগ্রেট করে। সাইন আপ করার আগে আমরা একটি কম্প্যাটিবিলিটি চেকারও প্রদান করি।" },
-        { question: "Markt POS এর সাথে কী কী হার্ডওয়্যার অন্তর্ভুক্ত?", answer: "আমরা আপনার প্রয়োজন অনুযায়ী বিভিন্ন হার্ডওয়্যার বান্ডেল অফার করি। একটি সাধারণ বান্ডেলে টাচ-স্ক্রিন টার্মিনাল, কাস্টমার-ফেসিং ডিসপ্লে, রিসিট প্রিন্টার, ক্যাশ ড্রয়ার এবং বারকোড স্ক্যানার অন্তর্ভুক্ত।" },
-        { question: "Markt POS কি EBT/SNAP পেমেন্ট সাপোর্ট করে?", answer: "হ্যাঁ, সম্পূর্ণভাবে। আমাদের সিস্টেম EBT/SNAP লেনদেন প্রসেস করার জন্য সার্টিফাইড, চেকআউটের সময় যোগ্য এবং অযোগ্য আইটেম স্বয়ংক্রিয়ভাবে আলাদা করে।" },
-        { question: "আমার ইন্টারনেট বন্ধ হলে আমার ডেটার কী হবে?", answer: "Markt POS এ একটি শক্তিশালী অফলাইন মোড রয়েছে। আপনি কাস্টমারদের বিল করা, ক্যাশ গ্রহণ এবং অফলাইন ক্রেডিট কার্ড লেনদেন প্রসেস করা চালিয়ে যেতে পারবেন। ইন্টারনেট ফিরে আসলে, সমস্ত ডেটা স্বয়ংক্রিয়ভাবে ক্লাউডে সিঙ্ক হয়।" },
-        { question: "সেটআপ করতে কতক্ষণ সময় লাগে?", answer: "বেশিরভাগ গ্রোসারি স্টোর ৪৮ ঘণ্টার মধ্যে চালু হয়ে যায়। আমাদের অনবোর্ডিং টিম আপনার প্রাথমিক ইনভেন্টরি ইমপোর্ট পরিচালনা করে এবং আপনার কর্মীদের জন্য ব্যাপক প্রশিক্ষণ প্রদান করে।" },
+        { question: "মুদি দোকানের POS সিস্টেম সাধারণ POS থেকে আলাদা কেন?", answer: "মুদি দোকানের POS সিস্টেমগুলো বিশেষভাবে প্রচুর ট্রানজেকশন এবং স্টক ম্যানেজ করার জন্য তৈরি।" },
+        { question: "স্মার্ট POS কি আমার বর্তমান হার্ডওয়্যারের সাথে চলবে?", answer: "হ্যাঁ, স্মার্ট POS বেশিরভাগ স্ট্যান্ডার্ড হার্ডওয়্যারের সাথে সহজেই ইন্টিগ্রেট হয়।" },
+        { question: "ইন্টারনেট না থাকলে কি হবে?", answer: "অফলাইন মোডে আপনি পেমেন্ট নিতে পারবেন, এবং ইন্টারনেট আসলে ডাটা সিঙ্ক হয়ে যাবে।" },
+        { question: "সেটআপ করতে কত সময় লাগবে?", answer: "আমাদের টিম আপনার পুরো সিস্টেম ৪৮ ঘণ্টার মধ্যেই সম্পূর্ণ সেটআপ করে দেবে।" },
+        { question: "সফটওয়্যারের সাথে ট্রেনিং দেওয়া হয় কি?", answer: "হ্যাঁ, আপনার স্টাফদের জন্য আমরা ফ্রি ট্রেনিং এবং গাইডলাইন প্রোভাইড করি।" },
+        { question: "কোনো মাসিক মেইনটেইনেন্স চার্জ আছে কি?", answer: "না, আমাদের প্যাকেজগুলোর বাইরে কোনো ধরনের হিডেন বা মেইনটেইনেন্স চার্জ নেই।" },
+        { question: "অনলাইন অর্ডারিং এর সুবিধা কি পাবো?", answer: "হ্যাঁ, স্ট্যান্ডার্ড এবং প্রিমিয়াম প্যাকেজে আপনি আপনার স্টোরের অনলাইন অর্ডার ম্যানেজ করতে পারবেন।" },
+        { question: "যেকোনো সমস্যায় সাপোর্ট পাবো কিভাবে?", answer: "আমাদের ডেডিকেটেড সাপোর্ট টিম ২৪/৭ আপনাকে ফোন বা ইমেইলের মাধ্যমে সাহায্য করবে।" },
     ];
 
     return (
-        <section className="py-16 sm:py-24 ">
-            <div className="main-container max-w-[800px]">
-                <motion.div className="mb-8 sm:mb-12 text-center sm:text-left"
-                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--primary-color)]">সচরাচর জিজ্ঞাসা: গ্রোসারি স্টোর পস সলিউশন</h2>
+        <section className="py-16 sm:py-24 bg-white">
+            <div className="main-container">
+                <motion.div 
+                    className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4"
+                    initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+                >
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#111827] mb-4 sm:mb-6 leading-tight">
+                        সচরাচর জিজ্ঞাসিত <span className="text-[#00A859]">প্রশ্নাবলী</span>
+                    </h2>
+                    <p className="text-gray-500 text-sm sm:text-base md:text-lg font-medium leading-relaxed">
+                        আমাদের সফটওয়্যার সম্পর্কে আপনার যেকোনো সাধারণ প্রশ্নের উত্তর এখানে পেয়ে যাবেন খুব সহজেই।
+                    </p>
                 </motion.div>
 
-                <div className="space-y-3 sm:space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     {faqs.map((faq, index) => (
                         <motion.div key={index}
-                            className={`bg-white rounded-xl sm:rounded-2xl border ${openIndex === index ? 'border-[var(--primary-color)] shadow-md' : 'border-gray-200'} overflow-hidden transition-all duration-300`}
+                            className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
                             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.05 }}>
-                            <button className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center focus:outline-none gap-3"
-                                onClick={() => setOpenIndex(openIndex === index ? -1 : index)}>
-                                <span className={`text-sm sm:text-lg font-bold ${openIndex === index ? 'text-[var(--secondary-color)]' : 'text-[var(--primary-color)]'}`}>
-                                    {faq.question}
-                                </span>
-                                <div className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] rotate-180' : 'bg-gray-100 text-gray-500'}`}>
-                                    <FontAwesomeIcon icon={faChevronDown} className="text-xs sm:text-sm" />
-                                </div>
-                            </button>
-                            <AnimatePresence>
-                                {openIndex === index && (
-                                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}
-                                        className="overflow-hidden">
-                                        <p className="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-base text-[var(--text-secondary)] leading-relaxed font-medium">{faq.answer}</p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
+                            
+                            <div className="w-8 h-8 rounded-full bg-[#e6f8ef] text-[#00A859] flex items-center justify-center font-bold">
+                                ?
+                            </div>
+                            <h3 className="font-bold text-gray-800 text-sm">{faq.question}</h3>
+                            <p className="text-xs text-gray-500 leading-relaxed mt-auto">{faq.answer}</p>
+                            
                         </motion.div>
                     ))}
                 </div>

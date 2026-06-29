@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { toast } from 'react-hot-toast';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
 export default function LogInForm() {
@@ -10,7 +10,7 @@ export default function LogInForm() {
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    
+
     const { login, admin } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -25,16 +25,16 @@ export default function LogInForm() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        
+
         if (!email || !password) {
             toast.error("Please fill in all fields");
             return;
         }
 
         setIsLoading(true);
-        
+
         const result = await login(email, password);
-        
+
         setIsLoading(false);
         if (result.success) {
             toast.success("Login successful!");
@@ -60,7 +60,7 @@ export default function LogInForm() {
                     transition: 'all 0.4s ease',
                 }}
             >
-                <motion.div 
+                <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
@@ -69,7 +69,7 @@ export default function LogInForm() {
                 >
                     <Lock size={40} style={{ color: 'var(--text-primary)' }} />
                 </motion.div>
-                
+
                 <h1
                     className="text-3xl font-extrabold mb-2 tracking-tight"
                     style={{ color: 'var(--text-primary)', transition: 'color 0.4s ease' }}
@@ -98,8 +98,8 @@ export default function LogInForm() {
                             >
                                 <Mail size={18} />
                             </div>
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="w-full rounded-xl py-3.5 pl-11 pr-4 focus:outline-none font-semibold"
@@ -122,13 +122,13 @@ export default function LogInForm() {
                             >
                                 Password
                             </label>
-                            <a
-                                href="#"
+                            <Link
+                                to="#"
                                 className="text-xs font-bold hover:opacity-80"
                                 style={{ color: 'var(--secondary-color)' }}
                             >
                                 Forgot?
-                            </a>
+                            </Link>
                         </div>
                         <div className="relative group">
                             <div
@@ -137,8 +137,8 @@ export default function LogInForm() {
                             >
                                 <Lock size={18} />
                             </div>
-                            <input 
-                                type={showPassword ? "text" : "password"} 
+                            <input
+                                type={showPassword ? "text" : "password"}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="w-full rounded-xl py-3.5 pl-11 pr-12 focus:outline-none font-semibold tracking-wide"
@@ -150,7 +150,7 @@ export default function LogInForm() {
                                 }}
                                 placeholder="••••••••"
                             />
-                            <button 
+                            <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
                                 className="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer"
@@ -172,12 +172,12 @@ export default function LogInForm() {
                                         background: 'var(--input-bg)',
                                     }}
                                 ></div>
-                                <motion.div 
+                                <motion.div
                                     initial={false}
                                     className="absolute text-white opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"
                                 >
                                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </motion.div>
                             </div>
@@ -200,7 +200,7 @@ export default function LogInForm() {
                         }}
                     >
                         {isLoading ? (
-                            <motion.div 
+                            <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                                 className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"

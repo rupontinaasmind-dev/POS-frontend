@@ -14,6 +14,8 @@ export default function FloatingContact() {
         return null;
     }
 
+    const isBangPage = location.pathname === '/bn';
+
     return (
         <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] flex flex-col items-center gap-3">
             <AnimatePresence>
@@ -26,9 +28,9 @@ export default function FloatingContact() {
                         className="flex flex-col gap-3"
                     >
                         {/* WhatsApp */}
-                        <a 
-                            href="https://wa.me/8801681149497" 
-                            target="_blank" 
+                        <a
+                            href="https://wa.me/8801681149497"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
                             title="Message on WhatsApp"
@@ -37,9 +39,9 @@ export default function FloatingContact() {
                         </a>
 
                         {/* Messenger */}
-                        <a 
-                            href="https://m.me/" 
-                            target="_blank" 
+                        <a
+                            href="https://m.me/"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="w-12 h-12 rounded-full bg-[#00B2FF] text-white flex items-center justify-center text-2xl shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
                             title="Message on Messenger"
@@ -53,11 +55,10 @@ export default function FloatingContact() {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full text-white flex items-center justify-center text-2xl sm:text-3xl shadow-2xl transition-all duration-300 z-10 ${
-                    isOpen 
-                        ? 'bg-[var(--primary-color)] rotate-[135deg] shadow-lg' 
-                        : 'bg-[var(--secondary-color)] hover:bg-[#e03d0b] hover:scale-105 hover:-translate-y-1'
-                }`}
+                className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full text-white flex items-center justify-center text-2xl sm:text-3xl shadow-2xl transition-all duration-300 z-10 ${isOpen
+                        ? (isBangPage ? 'bg-[#0F766E] rotate-[135deg] shadow-lg' : 'bg-[var(--primary-color)] rotate-[135deg] shadow-lg')
+                        : (isBangPage ? 'bg-[#0F766E] hover:bg-[#115E59] hover:scale-105 hover:-translate-y-1' : 'bg-[var(--secondary-color)] hover:bg-[#e03d0b] hover:scale-105 hover:-translate-y-1')
+                    }`}
                 title="Contact Us"
             >
                 <FontAwesomeIcon icon={isOpen ? faPlus : faCommentDots} />

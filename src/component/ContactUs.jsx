@@ -81,7 +81,7 @@ export default function ContactUs() {
         setIsSubmitting(true);
 
         try {
-            await axios.post("http://localhost:5000/api/contact", formData);
+            await axios.post(`${import.meta.env.VITE_API_URL}/contact`, formData);
             toast.success("Contact request submitted successfully!", {
                 style: {
                     border: '1px solid var(--border-color)',

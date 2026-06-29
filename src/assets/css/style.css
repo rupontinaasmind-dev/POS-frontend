@@ -252,3 +252,18 @@ a {
 .admin-btn-view:hover {
     background: var(--bg-light);
 }
+
+
+@media screen and (max-width: 370px) {
+    .fading-style {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .element-size {
+        font-size: 12px;
+        width: 62px;
+        height: 60px;
+    }
+}
