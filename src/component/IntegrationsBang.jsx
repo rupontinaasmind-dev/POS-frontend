@@ -60,7 +60,7 @@ export default function IntegrationsBang() {
                 <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full max-w-5xl mx-auto flex items-center justify-center mt-8">
                     {/* Center Element */}
                     <div className="element-size sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#0F766E] rounded-3xl shadow-2xl flex flex-col items-center justify-center z-20 text-white font-black text-sm sm:text-base md:text-lg lg:text-xl transform hover:scale-105 transition-transform duration-300">
-                        <span>Markt</span>
+                        <span>Smart</span>
                         <span>POS</span>
                     </div>
 

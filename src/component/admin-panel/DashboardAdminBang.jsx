@@ -4,11 +4,11 @@ import axiosInstance from '../../utils/axiosInstance';
 import { Search, X, Menu } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import SEO from '../SEO';
-import Sidebar from './Sidebar';
-import Cards from './Cards';
-import Table from './Table';
+import SidebarBang from './SidebarBang';
+import CardsBang from './CardsBang';
+import TableBang from './TableBang';
 
-export default function DashboardAdmin() {
+export default function DashboardAdminBang() {
     const [activeTab, setActiveTab] = useState('contacts');
     const [contacts, setContacts] = useState([]);
     const [demos, setDemos] = useState([]);
@@ -45,14 +45,14 @@ export default function DashboardAdmin() {
             setDemos(demoRes.data.data || []);
         } catch (error) {
             console.error('Failed to fetch data:', error);
-            toast.error("Failed to load data.");
+            toast.error("ডেটা লোড করতে ব্যর্থ হয়েছে।");
         } finally {
             setLoading(false);
         }
     };
 
     const handleDelete = async (id, type) => {
-        if (!window.confirm("Are you sure you want to delete this record?")) return;
+        if (!window.confirm("আপনি কি নিশ্চিত যে আপনি এই রেকর্ডটি মুছতে চান?")) return;
 
         try {
             if (type === 'contacts') {
@@ -62,15 +62,15 @@ export default function DashboardAdmin() {
                 await axiosInstance.delete(`/demo/${id}`);
                 setDemos(prev => prev.filter(item => item._id !== id));
             }
-            toast.success("Deleted successfully!");
+            toast.success("সফলভাবে মুছে ফেলা হয়েছে!");
         } catch (error) {
             console.error("Failed to delete:", error);
-            toast.error("Failed to delete record.");
+            toast.error("রেকর্ড মুছতে ব্যর্থ হয়েছে।");
         }
     };
 
     const formatDate = (dateString) => {
-        return new Date(dateString).toLocaleDateString('en-US', {
+        return new Date(dateString).toLocaleDateString('bn-BD', {
             year: 'numeric', month: 'short', day: 'numeric',
             hour: '2-digit', minute: '2-digit',
         });
@@ -93,11 +93,9 @@ export default function DashboardAdmin() {
     const currentContacts = filteredContacts.slice(indexOfFirstItem, indexOfLastItem);
     const currentDemos = filteredDemos.slice(indexOfFirstItem, indexOfLastItem);
 
-
-
     return (
-        <div className="min-h-screen bg-[var(--bg-color)]">
-            <SEO title="Admin Dashboard" description="Smart POS Admin Dashboard" />
+        <div className="bangla-admin-theme min-h-screen bg-[var(--bg-color)]">
+            <SEO title="অ্যাডমিন প্যানেল | Smart POS" description="Smart POS অ্যাডমিন প্যানেল" />
 
             {/* Mobile Sidebar Overlay */}
             <AnimatePresence>
@@ -111,7 +109,7 @@ export default function DashboardAdmin() {
             </AnimatePresence>
 
             {/* Sidebar */}
-            <Sidebar 
+            <SidebarBang 
                 isSidebarOpen={isSidebarOpen} 
                 setIsSidebarOpen={setIsSidebarOpen} 
                 activeTab={activeTab} 
@@ -130,16 +128,16 @@ export default function DashboardAdmin() {
                         </button>
                         <div>
                             <h2 className="text-[24px] sm:text-[28px] font-extrabold text-[var(--primary-color)] m-0 tracking-tight leading-tight">
-                                {activeTab === 'contacts' ? 'Contact Messages' : 'Demo Requests'}
+                                {activeTab === 'contacts' ? 'যোগাযোগ বার্তা' : 'ডেমো অনুরোধ'}
                             </h2>
                             <p className="text-[var(--text-secondary)] text-sm mt-1 font-medium">
-                                {activeTab === 'contacts' ? `${filteredContacts.length} messages received` : `${filteredDemos.length} demo requests`}
+                                {activeTab === 'contacts' ? `${filteredContacts.length} টি বার্তা গৃহীত হয়েছে` : `${filteredDemos.length} টি ডেমো অনুরোধ`}
                             </p>
                         </div>
                     </div>
                     <div className="relative">
                         <input
-                            type="text" placeholder="Search..." value={searchTerm}
+                            type="text" placeholder="খুঁজুন..." value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="w-[280px] py-3 pr-4 pl-10 rounded-xl border border-[var(--border-color)] bg-white text-sm outline-none font-medium text-[var(--primary-color)]"
                         />
@@ -148,10 +146,10 @@ export default function DashboardAdmin() {
                 </div>
 
                 {/* Stats Cards */}
-                <Cards contacts={contacts} demos={demos} />
+                <CardsBang contacts={contacts} demos={demos} />
 
                 {/* Table Area */}
-                <Table 
+                <TableBang 
                     loading={loading}
                     activeTab={activeTab}
                     currentContacts={currentContacts}
@@ -184,7 +182,7 @@ export default function DashboardAdmin() {
                             className="bg-white rounded-[20px] py-8 px-9 w-full max-w-[520px] shadow-2xl border border-[var(--border-color)] flex flex-col max-h-[90vh]"
                         >
                             <div className="flex justify-between items-center mb-5 shrink-0">
-                                <h3 className="text-xl font-extrabold text-[var(--primary-color)] m-0">Message Details</h3>
+                                <h3 className="text-xl font-extrabold text-[var(--primary-color)] m-0">বার্তার বিবরণ</h3>
                                 <button onClick={() => setSelectedMessage(null)}
                                     className="w-8 h-8 rounded-lg border border-[var(--border-color)] bg-[var(--bg-light)] cursor-pointer text-[var(--primary-color)] flex items-center justify-center hover:bg-[var(--border-color)] transition-colors"
                                 ><X size={18} /></button>
@@ -192,11 +190,11 @@ export default function DashboardAdmin() {
 
                             <div className="overflow-y-auto pr-3 flex-1">
                                 <div className="mb-4">
-                                    <p className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide m-0 mb-1">From</p>
+                                    <p className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide m-0 mb-1">প্রেরক</p>
                                     <p className="text-[15px] font-semibold text-[var(--primary-color)] m-0">{selectedMessage.firstName} {selectedMessage.lastName}</p>
                                 </div>
                                 <div className="pb-2">
-                                    <p className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide m-0 mb-2">Message</p>
+                                    <p className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide m-0 mb-2">বার্তা</p>
                                     <div className="bg-[var(--bg-color)] rounded-xl py-4 px-5 border border-[var(--border-color)]">
                                         <div className="text-sm leading-relaxed text-[var(--primary-color)] font-medium whitespace-pre-wrap max-h-[150px] overflow-y-auto overflow-x-hidden break-words pr-2 custom-scrollbar">
                                             {selectedMessage.message}

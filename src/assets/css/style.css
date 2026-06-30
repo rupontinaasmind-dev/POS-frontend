@@ -267,3 +267,24 @@ a {
         height: 60px;
     }
 }
+
+@media screen and (max-width: 1023px) {
+    .smartpos-action {
+        padding-top: 60px;
+    }
+}
+
+/* Bangla Admin Theme Override */
+.bangla-admin-theme {
+    --primary-color: #1E293B;
+    --primary-light: #334155;
+    --primary-dark: #0F172A;
+    --secondary-color: #0F766E;
+    --secondary-light: #14B8A6;
+    --secondary-dark: #115E59;
+    --bg-color: #F8FAFC;
+    --bg-light: #F1F5F9;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --border-color: #E2E8F0;
+}

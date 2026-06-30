@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
-export default function LogInForm() {
+export default function LogInFormBang() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +18,7 @@ export default function LogInForm() {
     // Redirect if already logged in
     useEffect(() => {
         if (admin) {
-            const from = location.state?.from?.pathname || '/admin';
+            const from = location.state?.from?.pathname || '/bn/admin';
             navigate(from, { replace: true });
         }
     }, [admin, navigate, location]);
@@ -27,7 +27,7 @@ export default function LogInForm() {
         e.preventDefault();
 
         if (!email || !password) {
-            toast.error("Please fill in all fields");
+            toast.error("সব ফিল্ড পূরণ করুন");
             return;
         }
 
@@ -37,8 +37,8 @@ export default function LogInForm() {
 
         setIsLoading(false);
         if (result.success) {
-            toast.success("Login successful!");
-            const from = location.state?.from?.pathname || '/admin';
+            toast.success("লগইন সফল হয়েছে!");
+            const from = location.state?.from?.pathname || '/bn/admin';
             navigate(from, { replace: true });
         }
     };
@@ -46,7 +46,7 @@ export default function LogInForm() {
     return (
         <div
             className="min-h-screen w-full flex items-center justify-center px-4 py-10"
-            style={{ background: 'var(--bg-color)', transition: 'background 0.4s ease' }}
+            style={{ background: '#F8FAFB', transition: 'background 0.4s ease' }}
         >
             <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -54,9 +54,9 @@ export default function LogInForm() {
                 transition={{ duration: 0.5 }}
                 className="max-w-md w-full rounded-3xl p-10 text-center"
                 style={{
-                    background: 'var(--card-bg)',
-                    border: '1px solid var(--border-color)',
-                    boxShadow: 'var(--card-shadow)',
+                    background: '#FFFFFF',
+                    border: '1px solid #E2E8F0',
+                    boxShadow: '0 4px 24px rgba(15, 118, 110, 0.08)',
                     transition: 'all 0.4s ease',
                 }}
             >
@@ -65,36 +65,36 @@ export default function LogInForm() {
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                     className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-                    style={{ background: '#E8FAAA' }}
+                    style={{ background: '#CCFBF1' }}
                 >
-                    <Lock size={40} style={{ color: 'var(--text-primary)' }} />
+                    <Lock size={40} style={{ color: '#0F766E' }} />
                 </motion.div>
 
                 <h1
                     className="text-3xl font-extrabold mb-2 tracking-tight"
-                    style={{ color: 'var(--text-primary)', transition: 'color 0.4s ease' }}
+                    style={{ color: '#1E293B', transition: 'color 0.4s ease' }}
                 >
-                    Admin Access
+                    অ্যাডমিন অ্যাক্সেস
                 </h1>
                 <p
                     className="text-base font-medium mb-8 leading-relaxed"
-                    style={{ color: 'var(--text-secondary)', transition: 'color 0.4s ease' }}
+                    style={{ color: '#64748B', transition: 'color 0.4s ease' }}
                 >
-                    Please log in to manage your Smart POS dashboard.
+                    আপনার Smart POS ড্যাশবোর্ড পরিচালনা করতে লগইন করুন।
                 </p>
 
                 <form onSubmit={handleLogin} className="space-y-5 text-left">
                     <div>
                         <label
                             className="block text-sm font-bold mb-2 ml-1"
-                            style={{ color: 'var(--text-primary)', transition: 'color 0.4s ease' }}
+                            style={{ color: '#1E293B', transition: 'color 0.4s ease' }}
                         >
-                            Email Address
+                            ইমেইল ঠিকানা
                         </label>
                         <div className="relative group">
                             <div
                                 className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
-                                style={{ color: 'var(--text-secondary)', transition: 'color 0.4s ease' }}
+                                style={{ color: '#64748B', transition: 'color 0.4s ease' }}
                             >
                                 <Mail size={18} />
                             </div>
@@ -104,9 +104,9 @@ export default function LogInForm() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="w-full rounded-xl py-3.5 pl-11 pr-4 focus:outline-none font-semibold"
                                 style={{
-                                    background: 'var(--input-bg)',
-                                    border: '1px solid var(--border-color)',
-                                    color: 'var(--text-primary)',
+                                    background: '#F1F5F9',
+                                    border: '1px solid #E2E8F0',
+                                    color: '#1E293B',
                                     transition: 'all 0.4s ease',
                                 }}
                                 placeholder="admin@smartpos.com"
@@ -118,22 +118,22 @@ export default function LogInForm() {
                         <div className="flex justify-between items-center mb-2 ml-1 pr-1">
                             <label
                                 className="block text-sm font-bold"
-                                style={{ color: 'var(--text-primary)', transition: 'color 0.4s ease' }}
+                                style={{ color: '#1E293B', transition: 'color 0.4s ease' }}
                             >
-                                Password
+                                পাসওয়ার্ড
                             </label>
                             <Link
                                 to="#"
                                 className="text-xs font-bold hover:opacity-80"
-                                style={{ color: 'var(--secondary-color)' }}
+                                style={{ color: '#0F766E' }}
                             >
-                                Forgot?
+                                ভুলে গেছেন?
                             </Link>
                         </div>
                         <div className="relative group">
                             <div
                                 className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
-                                style={{ color: 'var(--text-secondary)', transition: 'color 0.4s ease' }}
+                                style={{ color: '#64748B', transition: 'color 0.4s ease' }}
                             >
                                 <Lock size={18} />
                             </div>
@@ -143,9 +143,9 @@ export default function LogInForm() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="w-full rounded-xl py-3.5 pl-11 pr-12 focus:outline-none font-semibold tracking-wide"
                                 style={{
-                                    background: 'var(--input-bg)',
-                                    border: '1px solid var(--border-color)',
-                                    color: 'var(--text-primary)',
+                                    background: '#F1F5F9',
+                                    border: '1px solid #E2E8F0',
+                                    color: '#1E293B',
                                     transition: 'all 0.4s ease',
                                 }}
                                 placeholder="••••••••"
@@ -154,7 +154,7 @@ export default function LogInForm() {
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
                                 className="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer"
-                                style={{ color: 'var(--text-secondary)', transition: 'color 0.3s ease' }}
+                                style={{ color: '#64748B', transition: 'color 0.3s ease' }}
                             >
                                 {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                             </button>
@@ -166,10 +166,10 @@ export default function LogInForm() {
                             <div className="relative flex items-center justify-center w-5 h-5 mr-3">
                                 <input type="checkbox" className="peer sr-only" />
                                 <div
-                                    className="w-5 h-5 border-2 rounded-md transition-all peer-checked:!bg-[var(--secondary-color)] peer-checked:!border-[var(--secondary-color)]"
+                                    className="w-5 h-5 border-2 rounded-md transition-all peer-checked:!bg-[#0F766E] peer-checked:!border-[#0F766E]"
                                     style={{
-                                        borderColor: 'var(--border-color)',
-                                        background: 'var(--input-bg)',
+                                        borderColor: '#E2E8F0',
+                                        background: '#F1F5F9',
                                     }}
                                 ></div>
                                 <motion.div
@@ -183,9 +183,9 @@ export default function LogInForm() {
                             </div>
                             <span
                                 className="text-sm font-semibold"
-                                style={{ color: 'var(--text-secondary)', transition: 'color 0.4s ease' }}
+                                style={{ color: '#64748B', transition: 'color 0.4s ease' }}
                             >
-                                Remember me
+                                আমাকে মনে রাখুন
                             </span>
                         </label>
                     </div>
@@ -195,7 +195,7 @@ export default function LogInForm() {
                         type="submit"
                         className="w-full py-4 px-6 rounded-xl font-bold text-[15px] text-white flex items-center justify-center gap-2 mt-4 hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer"
                         style={{
-                            background: 'var(--secondary-color)',
+                            background: '#0F766E',
                             transition: 'all 0.3s ease',
                         }}
                     >
@@ -207,7 +207,7 @@ export default function LogInForm() {
                             />
                         ) : (
                             <>
-                                Sign In
+                                সাইন ইন
                                 <ArrowRight size={18} />
                             </>
                         )}

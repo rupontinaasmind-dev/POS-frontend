@@ -15,8 +15,8 @@ export default function DemoPageBang() {
         >
             <SEO 
                 title="ডেমো রিকোয়েস্ট করুন" 
-                description="Markt POS আপনার ব্যবসা কীভাবে সহজ করবে তা জানতে ফ্রি ডেমো বুক করুন।" 
-                keywords="POS Demo, Markt POS Demo, Point of Sale Trial, Grocery POS Demo, ডেমো"
+                description="Smart POS আপনার ব্যবসা কীভাবে সহজ করবে তা জানতে ফ্রি ডেমো বুক করুন।" 
+                keywords="POS Demo, Smart POS Demo, Point of Sale Trial, All Purpose POS Demo, ডেমো"
             />
             <HeaderBang />
 

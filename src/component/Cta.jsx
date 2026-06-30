@@ -14,7 +14,7 @@ export default function Cta() {
     ];
 
     return (
-        <section className="relative overflow-hidden bg-[var(--primary-color)]">
+        <section className="smartpos-action relative overflow-hidden bg-[var(--primary-color)]">
             <div className="absolute inset-0 bg-black/10"></div>
 
             <div className="main-container relative z-10">
@@ -23,10 +23,10 @@ export default function Cta() {
                     <motion.div className="w-full lg:w-1/2 text-white text-center lg:text-left"
                         initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">
-                            See Markt POS <br className="hidden lg:block" />in action
+                            See Smart POS <br className="hidden lg:block" />in action
                         </h2>
                         <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                            Get a free, personalized demo to see how Markt POS can streamline your grocery store operations.
+                            Get a free, personalized demo to see how Smart POS can streamline your business operations.
                         </p>
                         <Link to="/demo" className="inline-block bg-[var(--secondary-color)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-bold transition-all shadow-xl hover:shadow-2xl hover:scale-105 hover:bg-[var(--secondary-dark)]">
                             Get a free demo

@@ -19,13 +19,13 @@ export default function Ecosystem() {
                     </motion.p>
                 </motion.div>
 
-                <div className="relative flex flex-col md:flex-row items-center justify-center min-h-[300px] sm:min-h-[400px] md:min-h-[600px] w-full max-w-[1000px] mx-auto gap-6 md:gap-0">
+                <div className="relative flex flex-col lg:flex-row items-center justify-center min-h-[250px] min-[400px]:min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] w-full max-w-[1000px] mx-auto gap-12 sm:gap-16 lg:gap-0">
 
                     {/* Left: Back office */}
-                    <motion.div className="md:absolute left-0 z-10 w-full md:w-[45%] transform md:-translate-y-8 md:-translate-x-8"
+                    <motion.div className="lg:absolute left-0 z-10 w-[90%] sm:w-[85%] lg:w-[45%] mx-auto transform lg:-translate-y-8 lg:-translate-x-2 xl:-translate-x-8"
                         initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
                         <div className="relative">
-                            <div className="absolute -top-3 -left-2 sm:-top-4 sm:-left-4 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
+                            <div className="absolute -top-4 -left-3 sm:-top-4 sm:-left-6 lg:-left-6 xl:-left-8 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
                                 Back office
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                             </div>
@@ -34,10 +34,10 @@ export default function Ecosystem() {
                     </motion.div>
 
                     {/* Center: POS system */}
-                    <motion.div className="md:absolute left-1/2 transform md:-translate-x-1/2 z-0 w-full md:w-[45%] h-[250px] sm:h-[350px] md:h-[500px]"
+                    <motion.div className="lg:absolute left-1/2 transform lg:-translate-x-1/2 z-0 w-[90%] sm:w-[85%] lg:w-[45%] mx-auto h-[200px] min-[400px]:h-[250px] sm:h-[350px] lg:h-[500px]"
                         initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }}>
                         <div className="relative w-full h-full">
-                            <div className="absolute -bottom-3 -left-4 sm:-bottom-4 sm:-left-8 md:left-8 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
+                            <div className="absolute -bottom-4 -left-3 sm:-bottom-4 sm:-left-6 lg:left-4 xl:left-8 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
                                 POS system
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                             </div>
@@ -46,10 +46,10 @@ export default function Ecosystem() {
                     </motion.div>
 
                     {/* Right: Online sales */}
-                    <motion.div className="md:absolute right-0 z-20 w-full md:w-[35%] transform md:translate-y-12 md:translate-x-8"
+                    <motion.div className="lg:absolute right-0 z-20 w-[70%] sm:w-[60%] lg:w-[35%] mx-auto transform lg:translate-y-12 lg:translate-x-2 xl:translate-x-8"
                         initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.4 }}>
                         <div className="relative">
-                            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-8 md:-left-16 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
+                            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-8 lg:-left-12 xl:-left-16 z-20 bg-[var(--secondary-color)] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-2 sm:gap-3">
                                 Online sales
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                             </div>

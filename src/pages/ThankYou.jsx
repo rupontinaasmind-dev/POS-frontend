@@ -10,7 +10,7 @@ export default function ThankYou() {
         <>
             <SEO 
                 title="Thank You" 
-                description="Thank you for contacting Markt POS. We will reach out to you very soon." 
+                description="Thank you for contacting Smart POS. We will reach out to you very soon." 
             />
             <div className="flex items-center justify-center bg-[var(--bg-color)] px-4 min-h-screen">
                 <motion.div

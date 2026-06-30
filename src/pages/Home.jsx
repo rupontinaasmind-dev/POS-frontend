@@ -16,17 +16,17 @@ import ContactUs from '../component/ContactUs';
 
 export default function Home() {
     return (
-        <motion.div 
+        <motion.div
             className="bg-[var(--bg-color)] min-h-screen font-sans"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
         >
-            <SEO 
-                title="Home" 
-                description="Markt POS is the leading point of sale system designed specifically for grocery stores, supermarkets, and specialty markets." 
-                keywords="POS, Point of Sale, Grocery Store POS, Retail Software, Markt POS, Cash Register"
+            <SEO
+                title="Home"
+                description="Smart POS is the leading all-purpose point of sale system designed specifically for businesses of all sizes."
+                keywords="POS, Point of Sale, All Purpose POS, Retail Software, Smart POS, Cash Register"
             />
             <HeaderTop />
             <Header />

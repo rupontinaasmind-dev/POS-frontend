@@ -115,11 +115,11 @@ export default function ContactUsBang() {
     };
     return (
         <div className="main-container max-w-7xl py-10 sm:py-16 lg:py-20">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+            <div className="flex flex-col min-[991px]:flex-row gap-12 min-[991px]:gap-20">
 
                 {/* Left Column - Content */}
                 <motion.div
-                    className="w-full lg:w-1/2"
+                    className="w-full min-[991px]:w-1/2 text-center min-[991px]:text-left items-center min-[991px]:items-start flex flex-col"
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
@@ -135,42 +135,42 @@ export default function ContactUsBang() {
                         <span className="text-[#0F766E] block mt-2">শুরু করুন</span>
                     </h1>
 
-                    <p className="text-lg sm:text-xl text-gray-500 mb-12 font-medium leading-relaxed max-w-md">
+                    <p className="text-lg sm:text-xl text-gray-500 mb-12 font-medium leading-relaxed">
                         একসাথে দারুণ কিছু তৈরি করতে প্রস্তুত? আমাদের জানান, আমরা আপনার সাথে আছি।
                     </p>
 
                     <div className="space-y-8">
                         <div>
                             <p className="text-[10px] sm:text-xs font-bold text-[#0F766E]/70 uppercase tracking-[0.2em] mb-2">ইমেইল</p>
-                            <Link to={"mailto:hello.naasmind@gmail.com"} className="text-2xl sm:text-3xl font-extrabold text-[#0F766E] hover:text-[#115E59] transition-colors">
+                            <Link to={"mailto:hello.naasmind@gmail.com"} className="text-[16px] min-[475px]:text-2xl sm:text-3xl font-extrabold text-[#0F766E] hover:text-[#115E59] transition-colors">
                                 hello.naasmind@gmail.com
                             </Link>
                         </div>
 
                         <div>
                             <p className="text-[10px] sm:text-xs font-bold text-[#0F766E]/70 uppercase tracking-[0.2em] mb-2">ফোন নম্বর</p>
-                            <a href="tel:+8801681149497" className="text-2xl sm:text-3xl font-extrabold text-[#0F766E] hover:text-[#115E59] transition-colors">
-                                +880 16811 49497
+                            <a href="tel:+8801772337656" className="text-[16px] min-[475px]:text-2xl sm:text-3xl font-extrabold text-[#0F766E] hover:text-[#115E59] transition-colors">
+                                +৮৮০১৭৭২৩৩৩৬৫৬
                             </a>
                         </div>
                     </div>
 
-                    <div className="flex gap-4 mt-12">
-                        <Link to={"#"} className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
+                    <div className="flex gap-4 mt-12 justify-center min-[991px]:justify-start">
+                        <a href="https://www.linkedin.com/company/naasmindhq/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faLinkedinIn} className="text-lg" />
-                        </Link>
-                        <Link to={"https://www.instagram.com/naasmind/"} className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
+                        </a>
+                        <a href="https://www.instagram.com/naasmind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faInstagram} className="text-lg" />
-                        </Link>
-                        <Link to={"https://x.com/naasmind"} className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
+                        </a>
+                        <a href="https://x.com/Naasmindltd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-gray-200 bg-white shadow-sm flex items-center justify-center text-[#0F766E] hover:bg-[#0F766E] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faTwitter} className="text-lg" />
-                        </Link>
+                        </a>
                     </div>
                 </motion.div>
 
                 {/* Right Column - Form */}
                 <motion.div
-                    className="w-full lg:w-1/2"
+                    className="w-full min-[991px]:w-1/2"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}

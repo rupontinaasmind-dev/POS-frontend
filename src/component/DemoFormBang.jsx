@@ -183,7 +183,7 @@ export default function DemoFormBang() {
 
                             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F766E] mb-3">ফ্রি ডেমো নিন</h2>
                             <p className="text-sm text-gray-500 mb-8 font-medium leading-relaxed">
-                                আমাদের বিশেষজ্ঞের সাথে Markt POS এর সব সুবিধাগুলো জেনে নিন।
+                                আমাদের বিশেষজ্ঞের সাথে Smart POS এর সব সুবিধাগুলো জেনে নিন।
                             </p>
 
                             <form onSubmit={handleSubmit} className="space-y-5">

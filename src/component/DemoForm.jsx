@@ -125,14 +125,14 @@ export default function DemoForm() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border-color)] text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-[var(--primary-color)] mb-8 bg-white/50 shadow-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-[var(--secondary-color)]"></span>
-                        THE GROCERY POS FOR SPECIALTY MARKETS
+                        THE ALL-PURPOSE POS FOR YOUR BUSINESS
                     </div>
 
                     <h1 className="text-5xl sm:text-6xl lg:text-[60px] font-extrabold text-[var(--primary-color)] leading-[1.05] mb-8 tracking-tight">
                         POS software<br className="hidden lg:block" />
                         built for the<br className="hidden lg:block" />
                         next generation<br className="hidden lg:block" />
-                        of grocers.
+                        of businesses.
                     </h1>
 
                     <p className="text-base sm:text-lg text-[var(--text-secondary)] mb-10 font-medium leading-relaxed max-w-lg">
@@ -147,7 +147,7 @@ export default function DemoForm() {
                             },
                             {
                                 title: "Have your phone nearby",
-                                desc: "A Markt POS expert reaches out to schedule within 5 minutes."
+                                desc: "A Smart POS expert reaches out to schedule within 5 minutes."
                             },
                             {
                                 title: "Meet with an expert",
@@ -184,7 +184,7 @@ export default function DemoForm() {
 
                             <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--primary-color)] mb-3">Get a free demo</h2>
                             <p className="text-sm text-[var(--text-secondary)] mb-8 font-medium leading-relaxed">
-                                Walk through Markt POS with a specialist who knows specialty grocery.
+                                Walk through Smart POS with a specialist who knows your industry.
                             </p>
 
                             <form onSubmit={handleSubmit} className="space-y-5">

@@ -25,7 +25,7 @@ export default function TestimonialsBang() {
                             <span className="text-[var(--secondary-color)] italic">১০,০০০</span> এর বেশি গ্রাহকের বিশ্বস্ত সেবা
                         </h2>
                         <p className="text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
-                            গ্রোসারি স্টোরের মালিকদের কাছ থেকে শুনুন কিভাবে Markt POS তাদের দৈনন্দিন কার্যক্রমকে রূপান্তরিত করেছে।
+                            গ্রোসারি স্টোরের মালিকদের কাছ থেকে শুনুন কিভাবে Smart POS তাদের দৈনন্দিন কার্যক্রমকে রূপান্তরিত করেছে।
                         </p>
                         <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-dark)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-[var(--secondary-color)]/20 transform hover:-translate-y-1">
                             আরও গল্প পড়ুন

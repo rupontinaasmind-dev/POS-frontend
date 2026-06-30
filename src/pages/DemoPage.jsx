@@ -16,8 +16,8 @@ export default function DemoPage() {
         >
             <SEO 
                 title="Request a Demo" 
-                description="Get a free, personalized demo to see how Markt POS can streamline your grocery store operations." 
-                keywords="POS Demo, Markt POS Demo, Point of Sale Trial, Grocery POS Demo"
+                description="Get a free, personalized demo to see how Smart POS can streamline your business operations." 
+                keywords="POS Demo, Smart POS Demo, Point of Sale Trial, All Purpose POS Demo"
             />
             <HeaderTop />
             <Header />

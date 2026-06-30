@@ -9,8 +9,8 @@ export default function ThankYouBang() {
     return (
         <>
             <SEO 
-                title="ধন্যবাদ | Markt POS" 
-                description="Markt POS-এ যোগাযোগ করার জন্য ধন্যবাদ। আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করবো।" 
+                title="ধন্যবাদ | Smart POS" 
+                description="Smart POS-এ যোগাযোগ করার জন্য ধন্যবাদ। আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করবো।" 
             />
             <div className="flex items-center justify-center px-4 min-h-screen" style={{ backgroundColor: '#F8FAFC' }}>
                 <motion.div

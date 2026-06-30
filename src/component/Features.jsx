@@ -10,7 +10,7 @@ export default function Features() {
     const features = [
         { title: "Inventory management", description: "Track stock levels across all your locations in real-time. Automatically generate purchase orders when items run low.", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800", icon: faBoxesStacked },
         { title: "Hardware integration", description: "Seamlessly connect with barcode scanners, receipt printers, cash drawers, and weight scales.", image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800", icon: faDesktop },
-        { title: "Online ordering", description: "Launch your online grocery store in minutes. Sync your in-store and online inventory automatically.", image: "https://images.unsplash.com/photo-1588820462211-133cd34b12aa?auto=format&fit=crop&q=80&w=800", icon: faCartShopping },
+        { title: "Online ordering", description: "Launch your online store in minutes. Sync your in-store and online inventory automatically.", image: "https://images.unsplash.com/photo-1588820462211-133cd34b12aa?auto=format&fit=crop&q=80&w=800", icon: faCartShopping },
         { title: "Employee management", description: "Track employee hours, set role-based permissions, and monitor cashier performance.", image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800", icon: faUsers },
     ];
 
@@ -20,10 +20,10 @@ export default function Features() {
                 <motion.div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 px-4"
                     initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--primary-color)] mb-4 sm:mb-6">
-                        Comprehensive POS solutions for grocery stores
+                        Comprehensive all-purpose POS solutions
                     </h2>
                     <p className="text-base sm:text-lg text-[var(--text-secondary)] font-medium">
-                        Everything you need to run your grocery business efficiently.
+                        Everything you need to run your business efficiently.
                     </p>
                 </motion.div>
 
@@ -33,7 +33,7 @@ export default function Features() {
                         initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                         {features.map((feature, index) => (
                             <button key={index} onClick={() => setActiveTab(index)}
-                                className={`text-left px-4 sm:px-6 py-4 sm:py-5 rounded-xl sm:rounded-2xl transition-all duration-300 border-2 flex-shrink-0 snap-start min-w-[200px] lg:min-w-0 ${activeTab === index
+                                className={`text-left px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl transition-all duration-300 border-2 flex-shrink-0 snap-start min-w-[160px] sm:min-w-[200px] lg:min-w-0 ${activeTab === index
                                         ? 'border-[var(--secondary-color)] bg-[var(--secondary-color)]/5 shadow-md'
                                         : 'border-transparent hover:bg-black/5 text-[var(--text-secondary)]'
                                     }`}>
@@ -62,7 +62,7 @@ export default function Features() {
                                     <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
                                     <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
                                 </div>
-                                <div className="mx-auto bg-white px-8 sm:px-32 py-1 rounded-md shadow-sm text-[10px] sm:text-xs text-gray-400">marktpos.app</div>
+                                <div className="mx-auto bg-white px-6 sm:px-8 md:px-32 py-1 rounded-md shadow-sm text-[10px] sm:text-xs text-gray-400 truncate max-w-[60%]">smartpos.app</div>
                             </div>
                             <AnimatePresence mode="wait">
                                 <motion.img key={activeTab} src={features[activeTab].image} alt={features[activeTab].title}
@@ -73,7 +73,7 @@ export default function Features() {
                             {/* POS sidebar overlay */}
                             <div className="absolute top-10 sm:top-12 left-0 w-48 sm:w-64 h-full bg-[var(--primary-color)]/95 backdrop-blur-md hidden md:flex flex-col p-4 text-white">
                                 <div className="text-[var(--secondary-color)] font-bold text-lg sm:text-xl mb-6 sm:mb-8 flex items-center gap-2">
-                                    <FontAwesomeIcon icon={faStore} className="text-white" /> MarktPOS
+                                    <FontAwesomeIcon icon={faStore} className="text-white" /> SmartPOS
                                 </div>
                                 <div className="space-y-2 sm:space-y-4">
                                     {['Checkout', 'Orders', 'Inventory', 'Customers', 'Reports'].map((item, i) => (

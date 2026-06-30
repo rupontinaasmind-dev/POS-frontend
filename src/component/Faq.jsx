@@ -8,12 +8,12 @@ export default function Faq() {
     const [openIndex, setOpenIndex] = useState(0);
 
     const faqs = [
-        { question: "What makes a grocery store POS system different from a generic retail system?", answer: "Grocery store POS systems are specifically designed to handle high-volume transactions, thousands of SKUs, integrated scales for weighted items, SNAP/EBT payments, and complex inventory management including perishables and expiry dates." },
-        { question: "Will Markt POS integrate with my existing hardware?", answer: "Yes, Markt POS integrates with 95% of standard retail hardware including barcode scanners, receipt printers, cash drawers, and scales. We also provide a compatibility checker before you sign up." },
-        { question: "What hardware is included with Markt POS?", answer: "We offer various hardware bundles depending on your needs. A typical bundle includes a touch-screen terminal, customer-facing display, receipt printer, cash drawer, and barcode scanner." },
-        { question: "Does Markt POS support EBT/SNAP payments?", answer: "Yes, fully. Our system is certified to process EBT/SNAP transactions, automatically separating eligible and non-eligible items during checkout." },
-        { question: "What happens to my data if my internet goes down?", answer: "Markt POS features a robust offline mode. You can continue ringing up customers, accepting cash, and processing offline credit card transactions. Once the internet is restored, all data automatically syncs to the cloud." },
-        { question: "How long does it take to get setup?", answer: "Most grocery stores are up and running within 48 hours. Our onboarding team handles your initial inventory import and provides comprehensive training for your staff." },
+        { question: "What makes an all-purpose POS system different from a generic retail system?", answer: "Our all-purpose POS systems are specifically designed to handle high-volume transactions, thousands of SKUs, integrated scales for weighted items, SNAP/EBT payments, and complex inventory management including perishables and expiry dates." },
+        { question: "Will Smart POS integrate with my existing hardware?", answer: "Yes, Smart POS integrates with 95% of standard retail hardware including barcode scanners, receipt printers, cash drawers, and scales. We also provide a compatibility checker before you sign up." },
+        { question: "What hardware is included with Smart POS?", answer: "We offer various hardware bundles depending on your needs. A typical bundle includes a touch-screen terminal, customer-facing display, receipt printer, cash drawer, and barcode scanner." },
+        { question: "Does Smart POS support EBT/SNAP payments?", answer: "Yes, fully. Our system is certified to process EBT/SNAP transactions, automatically separating eligible and non-eligible items during checkout." },
+        { question: "What happens to my data if my internet goes down?", answer: "Smart POS features a robust offline mode. You can continue ringing up customers, accepting cash, and processing offline credit card transactions. Once the internet is restored, all data automatically syncs to the cloud." },
+        { question: "How long does it take to get setup?", answer: "Most businesses are up and running within 48 hours. Our onboarding team handles your initial inventory import and provides comprehensive training for your staff." },
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function Faq() {
             <div className="main-container max-w-[800px]">
                 <motion.div className="mb-8 sm:mb-12 text-center sm:text-left"
                     initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--primary-color)]">FAQs: Grocery store POS solutions</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--primary-color)]">FAQs: All-purpose POS solutions</h2>
                 </motion.div>
 
                 <div className="space-y-3 sm:space-y-4">

@@ -25,7 +25,7 @@ export default function Testimonials() {
                             Trusted by more than <span className="text-[var(--secondary-color)] italic">10,000</span> customers
                         </h2>
                         <p className="text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
-                            Hear from grocery store owners about how Markt POS transformed their daily operations.
+                            Hear from business owners about how Smart POS transformed their daily operations.
                         </p>
                         <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-dark)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-[var(--secondary-color)]/20 transform hover:-translate-y-1">
                             Read more stories

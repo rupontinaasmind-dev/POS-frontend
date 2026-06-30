@@ -47,10 +47,10 @@ export default function Comparison() {
                         <FontAwesomeIcon icon={faChartBar} /> Comparison
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--primary-color)] mb-3 sm:mb-4">
-                        What's the best grocery POS?
+                        What's the best all-purpose POS?
                     </h2>
                     <p className="text-sm sm:text-base lg:text-lg text-[var(--text-secondary)] max-w-xl mx-auto font-medium">
-                        See how Markt POS stacks up against other popular solutions side by side.
+                        See how Smart POS stacks up against other popular solutions side by side.
                     </p>
                 </motion.div>
 
@@ -59,14 +59,14 @@ export default function Comparison() {
                     initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>
                     <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
                         <div className="overflow-x-auto">
-                            <table className="w-full min-w-[580px]">
+                            <table className="w-full min-w-[500px]">
                                 <thead>
                                     <tr className="border-b-2 border-gray-100">
-                                        <th className="p-4 sm:p-6 text-left w-[34%] bg-gray-50/80">
+                                        <th className="p-3 sm:p-4 md:p-6 text-left w-[34%] bg-gray-50/80">
                                             <span className="text-xs sm:text-sm font-bold text-gray-400 uppercase tracking-wider">Features</span>
                                         </th>
-                                        {/* MarktPOS - highlighted column */}
-                                        <th className="p-4 sm:p-6 text-center w-[22%] relative" style={{ background: 'var(--bg-color)' }}>
+                                        {/* SmartPOS - highlighted column */}
+                                        <th className="p-3 sm:p-4 md:p-6 text-center w-[22%] relative" style={{ background: 'var(--bg-color)' }}>
                                             <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-[80%] h-1 rounded-b-full bg-[var(--secondary-color)]"></div>
                                             <div className="flex flex-col items-center gap-1.5 sm:gap-2">
                                                 <span className="bg-[var(--secondary-color)] text-white text-[8px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
@@ -76,7 +76,7 @@ export default function Comparison() {
                                                     <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-[var(--primary-color)] flex items-center justify-center">
                                                         <FontAwesomeIcon icon={faStore} className="text-white text-[8px] sm:text-[10px]" />
                                                     </div>
-                                                    MarktPOS
+                                                    SmartPOS
                                                 </div>
                                                 <div className="flex items-center gap-0.5 mt-0.5">
                                                     {[1, 2, 3, 4, 5].map(s => <FontAwesomeIcon key={s} icon={faStarSolid} className="text-yellow-400 text-[8px] sm:text-[10px]" />)}
@@ -84,7 +84,7 @@ export default function Comparison() {
                                                 </div>
                                             </div>
                                         </th>
-                                        <th className="p-4 sm:p-6 text-center w-[22%] border-l border-gray-100">
+                                        <th className="p-3 sm:p-4 md:p-6 text-center w-[22%] border-l border-gray-100">
                                             <div className="flex flex-col items-center gap-1.5">
                                                 <div className="font-bold text-sm sm:text-lg text-gray-400">Square</div>
                                                 <div className="flex items-center gap-0.5">
@@ -94,7 +94,7 @@ export default function Comparison() {
                                                 </div>
                                             </div>
                                         </th>
-                                        <th className="p-4 sm:p-6 text-center w-[22%] border-l border-gray-100">
+                                        <th className="p-3 sm:p-4 md:p-6 text-center w-[22%] border-l border-gray-100">
                                             <div className="flex flex-col items-center gap-1.5">
                                                 <div className="font-bold text-sm sm:text-lg text-gray-400">Clover</div>
                                                 <div className="flex items-center gap-0.5">
@@ -113,7 +113,7 @@ export default function Comparison() {
                                             className={`border-b border-gray-50 hover:bg-gray-50/50 transition-colors ${index === features.length - 1 ? 'border-b-0' : ''}`}
                                             initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                                             transition={{ duration: 0.3, delay: index * 0.04 }}>
-                                            <td className="p-3.5 sm:p-5 bg-[var(--bg-light)]">
+                                            <td className="p-2.5 sm:p-3.5 md:p-5 bg-[var(--bg-light)]">
                                                 <div className="flex items-center gap-2.5 sm:gap-3">
                                                     <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 flex-shrink-0">
                                                         <FontAwesomeIcon icon={feature.icon} className="text-[10px] sm:text-xs" />
@@ -121,17 +121,17 @@ export default function Comparison() {
                                                     <span className="text-xs sm:text-sm font-semibold text-[var(--text-primary)]">{feature.name}</span>
                                                 </div>
                                             </td>
-                                            <td className="p-3.5 sm:p-5 text-center bg-[var(--bg-color)]">
+                                            <td className="p-2.5 sm:p-3.5 md:p-5 text-center bg-[var(--bg-color)]">
                                                 {competitors.markt[index] ? (
                                                     <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--secondary-color)]/10 text-[var(--secondary-color)] shadow-sm">
                                                         <FontAwesomeIcon icon={faCheck} className="text-xs font-bold" />
                                                     </div>
                                                 ) : <Cross />}
                                             </td>
-                                            <td className="p-3.5 sm:p-5 text-center border-l border-gray-100">
+                                            <td className="p-2.5 sm:p-3.5 md:p-5 text-center border-l border-gray-100">
                                                 {competitors.square[index] ? <Check /> : <Cross />}
                                             </td>
-                                            <td className="p-3.5 sm:p-5 text-center border-l border-gray-100">
+                                            <td className="p-2.5 sm:p-3.5 md:p-5 text-center border-l border-gray-100">
                                                 {competitors.clover[index] ? <Check /> : <Cross />}
                                             </td>
                                         </motion.tr>
@@ -144,7 +144,7 @@ export default function Comparison() {
                         <div className="px-4 sm:px-8 py-4 sm:py-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 bg-[var(--bg-color)]">
                             <div className="flex items-center gap-2 text-xs sm:text-sm text-[var(--text-secondary)] text-center sm:text-left">
                                 <FontAwesomeIcon icon={faCircleInfo} className="text-[var(--secondary-color)]" />
-                                <span>MarktPOS is the <strong className="text-[var(--primary-color)]">only grocery-specific</strong> POS with full feature coverage.</span>
+                                <span>SmartPOS is the <strong className="text-[var(--primary-color)]">only all-purpose</strong> POS with full feature coverage.</span>
                             </div>
                             <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-dark)] text-white px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap">
                                 Start free trial <FontAwesomeIcon icon={faArrowRight} className="ml-1 text-[10px]" />

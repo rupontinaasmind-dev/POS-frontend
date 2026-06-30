@@ -115,11 +115,11 @@ export default function ContactUs() {
     };
     return (
         <div className="main-container max-w-7xl py-10 sm:py-16 lg:py-20">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+            <div className="flex flex-col min-[991px]:flex-row  gap-12 min-[991px]:gap-20">
 
                 {/* Left Column - Content */}
                 <motion.div
-                    className="w-full lg:w-1/2"
+                    className="w-full min-[991px]:w-1/2 text-center min-[991px]:text-left items-center min-[991px]:items-start flex flex-col"
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
@@ -130,12 +130,12 @@ export default function ContactUs() {
                         CONTACT US
                     </div>
 
-                    <h1 className="text-6xl sm:text-7xl lg:text-[80px] font-black uppercase leading-[0.95] tracking-tighter mb-8">
-                        <span className="text-[var(--primary-color)] block">Start A</span>
+                    <h1 className="text-6xl sm:text-7xl lg:text-[60px] font-black uppercase leading-[0.95] tracking-tighter mb-8">
+                        <span className="text-[var(--primary-color)] block ">Start A</span>
                         <span className="text-[var(--secondary-color)] block">Project</span>
                     </h1>
 
-                    <p className="text-lg sm:text-xl text-[var(--text-secondary)] mb-12 font-medium leading-relaxed max-w-md">
+                    <p className="text-lg sm:text-xl lg:text-[18px] text-[var(--text-secondary)] mb-12 font-medium leading-relaxed">
                         Ready to build something iconic together?
                         <br />
                         Drop a line and let's craft excellence.
@@ -143,28 +143,28 @@ export default function ContactUs() {
 
                     <div className="space-y-8">
                         <div>
-                            <p className="text-[10px] sm:text-xs font-bold text-[var(--primary-color)]/70 uppercase tracking-[0.2em] mb-2">Electronic Mail</p>
-                            <a href="mailto:hello.naasmind@gmail.com" className="text-2xl sm:text-3xl font-extrabold text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors">
+                            <p className="text-[10px] sm:text-xs  font-bold text-[var(--primary-color)]/70 uppercase tracking-[0.2em] mb-2">Electronic Mail</p>
+                            <a href="mailto:hello.naasmind@gmail.com" className="text-[16px] min-[475px]:text-2xl sm:text-3xl lg:text-[20px] font-extrabold text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors">
                                 hello.naasmind@gmail.com
                             </a>
                         </div>
 
                         <div>
                             <p className="text-[10px] sm:text-xs font-bold text-[var(--primary-color)]/70 uppercase tracking-[0.2em] mb-2">Direct Line</p>
-                            <a href="tel:+8801681149497" className="text-2xl sm:text-3xl font-extrabold text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors">
-                                +880 16811 49497
+                            <a href="tel:+8801772337656" className="text-[16px] min-[475px]:text-2xl sm:text-3xl lg:text-[20px] font-extrabold text-[var(--primary-color)] hover:text-[var(--secondary-color)] transition-colors">
+                                +8801772337656
                             </a>
                         </div>
                     </div>
 
-                    <div className="flex gap-4 mt-12">
-                        <a href="#" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
+                    <div className="flex gap-4 mt-12 justify-center min-[991px]:justify-start">
+                        <a href="https://www.linkedin.com/company/naasmindhq/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faLinkedinIn} className="text-lg" />
                         </a>
-                        <a href="#" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
+                        <a href="https://www.instagram.com/naasmind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faInstagram} className="text-lg" />
                         </a>
-                        <a href="#" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
+                        <a href="https://x.com/Naasmindltd" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-[var(--border-color)] bg-white shadow-sm flex items-center justify-center text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-all">
                             <FontAwesomeIcon icon={faTwitter} className="text-lg" />
                         </a>
                     </div>
@@ -172,7 +172,7 @@ export default function ContactUs() {
 
                 {/* Right Column - Form */}
                 <motion.div
-                    className="w-full lg:w-1/2"
+                    className="w-full min-[991px]:w-1/2"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.2 }}
